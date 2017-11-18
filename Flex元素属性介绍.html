@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex布局</title>
+    <style>
+        html,
+        body {
+            margin: 0 auto;
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            height: 300px;
+        }
+
+        .green,
+        .blue,
+        .red,
+        .yellow,
+        .dark,
+        .pink {
+            width: 25%;
+            height: 100px;
+        }
+
+        .green {
+            background-color: green;
+            height: 100px;
+            flex: 0 1 auto;
+            /* width: 1300px 设置了flex-basis后,再设置宽度无效 */
+            flex:1 
+        }
+
+        .blue {
+            background-color: blue;
+            height: 150px;
+        }
+
+        .red {
+            background-color: red;
+            height: 60px;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .dark {
+            background-color: darkred;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="green">1</div>
+        <div class="blue">2</div>
+        <div class="red">3</div>
+         <div class="yellow">4</div>
+        <!--<div class="dark">5</div>
+        <div class="pink">6</div> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>Flex元素属性(默认值:0,1,auto)</p>
+    <label>flex:flex-grow((默认值:0)占用比:定义了元素在flexbox中当有剩余空间的时候如何"瓜分"剩余空间, flex-grow 的值是相对的，它的具体表现还取决于此元素的同级元素。) 
+        flex-shrink((默认值:1)收缩比:定义了当没有足够空间的时候，元素如何压缩自身空间。)
+        flex-basis((默认值:auto)绝对值:定义 元素 的初始化大小。)</label>
+    <p>order:定义元素的排序。(默认属性:0)</p>
+</body>
+
+</html>
